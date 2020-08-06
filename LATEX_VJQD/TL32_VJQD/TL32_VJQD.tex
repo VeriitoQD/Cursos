@@ -1,0 +1,59 @@
+%%%Composición de formulas matematicas 
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%%%Paqueterias para conceptos matematicos
+\usepackage{amsmath}
+\usepackage{amssymb}
+%bordes de la pagina {Margenes}
+\setlength{\topmargin}{0mm}
+%%%Preambulo
+\title{TL32\_VJQD}
+\author{Veronica Quiros}
+\date{June 2020}
+%Cuerpo
+\begin{document}
+\maketitle
+%% Ejemplos de formulas con Latex
+ \section{Entornos Matem\'aticos}
+ \subsection{Expresiones}
+ \begin{enumerate}
+     \item 
+     \begin{align*}
+        h_{wH}(\delta)&= \min\limits_{z\in(0,1]} \log_q \frac{f_{wH} (z)}{z^\delta}\\
+        & =\min\limits_{z\in(0,1]} (\log_q {f_{wH} (z)}-\log_{q} {z^\delta})\\
+        &=\min\limits_{z\in(0,1]}(\log_{q} (1+(q-1)z) -\delta\log_{q} z)\\
+        &=\log_{q} \left(1+(q-1)\frac{\delta}{(q-1)(1-\delta)}\right)-\delta\log_{q} \left(\frac{\delta}{(q-1)(1-\delta)}\right)\\
+        &=\log_{q} \left(\frac{1}{(1-\delta)}\right) - \delta\log_{q} \delta +\delta\log_{q} (q-1) +\delta\log_{q} (q-1)\\ 
+        &=\log_{q} \frac{1}{\delta} +(1-\delta)\log_{q} \frac{1}{1-\delta}+\delta\log_{q} (q-1)\\
+     \end{align*}
+     \item
+     \begin{align*}
+         ab&=[x_{1},x_{2}]qx_{2}[x_{1},x_{2}][x_{1},x_{2}]x_{1}+q^{-1}qx_{2}[x_{1},x_{2}][[x_{1},x_{2}]+ q^{-1}x_{2}x_{1}][x_{1},x_{2}]x_{1}\\
+         &=[x_{1},x_{2}]qx_{2}[x_{1},x_{2}][x_{1},x_{2}]x_{1}+x_{2}[x_{1},x_{2}][x_{1},x_{2}][x_{1},x_{2}]x_{1}\\
+         & \quad+x_{2}[x_{1},x_{2}]q^{-1} x_{2}x_{1}[x_{1},x_{2}]x_{1}\\
+     \end{align*}
+     \item
+     \begin{align}
+         [x_{i},x_{j}]&=0, \quad si \, \left| i-j\right| > 1;\\
+         [[x_{i},x_{i+1}],x_{i+1} ]&=0, \quad si \; 1 \leq i < n;\\
+         [x_{i},[x_{i},x_{i+1}] ]&=0, \quad si \; 1 \leq i < n.
+     \end{align}
+     \item
+        \begin{align*}
+         [x_{i},x_{j}]&=0, \quad si \, \left| i-j\right| > 1;\\
+         [[x_{i},x_{i+1}],x_{i+1} ]&=0, \quad si \; 1 \leq i < n;
+         \end{align*}
+         \begin{align}
+         [x_{i},[x_{i},x_{i+1}] ]&=0, \quad si \; 1 \leq i < n.
+         \end{align}
+     \item
+     \begin{align*}
+         e^{i\theta_{1}} e^{i\theta_{2}} &= (\cos \theta_{1} + i\sin \theta_{1})(\cos \theta_{2} + i\sin \theta_{2})\\
+         &=(\cos \theta_{1} \cos \theta_{2} - \sin \theta_{1} \sin \theta_{2})+ i(\cos \theta_{1} \sin \theta_{2} + \sin \theta_{1} \cos \theta_{2})\\
+         &=\cos (\theta_{1} + \theta_{2})+ \sin (\theta_{1} + \theta_{2})\\
+         &=e^{i(\theta_{1}+\theta_{2})}
+     \end{align*}
+ \end{enumerate}
+
+\end{document}

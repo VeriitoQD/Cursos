@@ -1,0 +1,71 @@
+%Actividad TL23_VJQD: La estructura de un documento en LaTeX
+%Un tema seleccionado para practicar la estructura del Documento
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+%Preámbulo
+%a.Portada----------------------------------------------
+%h.1 Fuente de texto %i.1 Tamaño de letra
+\title{Estructuras de Datos: Pilas, Colas y Listas}
+\author{Verónica Jackeline Quiros Díaz }
+\date{\Large June 2020}
+%Cuerpo del Documento
+\begin{document}
+\maketitle
+%b.Resumen-----------------------------------------------
+\begin{abstract}%h.2 Fuente de texto %i.2 Tamaño de letra %Parrafo centrado
+   \emph{Una de las aplicaciones más interesantes y potentes de la memoria dinámica y de los punteros son, sin duda, las estructuras dinámicas de datos. Las estructuras básicas disponibles en C y C++ (structs y arrays) tienen una importante limitación: no pueden cambiar de tamaño durante la ejecución. Los arrays están compuestos por un determinado número de elementos, número que se decide en la fase de diseño, antes de que el programa ejecutable sea creado.}
+\end{abstract}
+\vfill
+%c-Índice--------------------------------------------------
+{\textbf{\Large \'Indice}}
+\begin{description}
+\item Desarrollo
+\item \ref{sec:EstructuraBasica}Estructura de Datos%e.Referencia cruzada--------
+\item \ref{sec:Listas} Listas
+\item \ref{sec:Pilas}Pilas
+\item \ref{sec:Colas} Colas
+\item \ref{sec:Arboles} Árboles
+\item Conclusión
+\end{description}
+\vfill
+\vfill
+%d.Tres secciones-----------------------------------------
+\textbf{\Large Desarrollo}
+\section{Estructuras de Datos}
+\begin{flushleft} Las estructuras de datos están compuestas de otras pequeñas estructuras a las que llamaremos nodos o elementos, que agrupan los datos con los que trabajará nuestro programa y además uno o más punteros autoreferenciales, es decir, punteros a objetos del mismo tipo nodo.
+\end{flushleft}
+\subsection{Estructura Básica}\label{sec:EstructuraBasica}
+%h.4 Fuente de texto------------------------------------
+\begin{center}
+\texttt{struct nodo 
+   int dato;
+   struct nodo *otronodo;}
+\end{center}
+\subsection{Listas} \label{sec:Listas}
+%f.Una lista numerada.---------------------------------
+\begin{enumerate}
+ \item\textsl{Listas Abiertas: Cada elemento sólo dispone de un puntero, que apuntará al siguiente elemento de la lista o valdrá NULL si es el último elemento.}
+\item \textsl{Listas circulares: (listas cerradas) Son parecidas a las listas abiertas, pero el último elemento apunta al primero. De hecho, en las listas circulares no puede hablarse de "primero" ni de "último". Cualquier nodo puede ser el nodo de entrada y salida.}
+\item \textsl{Listas doblemente enlazadas Cada elemento dispone de dos punteros, uno a punta al siguiente elemento y el otro al elemento anterior. Al contrario que las listas abiertas anteriores, estas listas pueden recorrerse en los dos sentidos.}
+\end{enumerate}
+\subsection{Pilas}\label{sec:Pilas}
+\textit{Son un tipo especial de lista, conocidas como listas LIFO (Last In, First Out: el último en entrar es el primero en salir). Los elementos se amontonan o apilan, de modo que sólo el elemento que está encima de la pila puede ser leído, y sólo pueden añadirse elementos encima de la pila.}
+\subsection{Colas}\label{sec:Colas}
+\textsl{Otro tipo de listas, conocidas como listas FIFO (First In, First Out: El primero en entrar es el primero en salir). Los elementos se almacenan en fila, pero sólo pueden añadirse por un extremo y leerse por el otro.}
+\subsection{Arboles}\label{sec:Arboles}
+%g.Una lista con viñetas---------------------------------
+ Cada elemento dispone de dos o más punteros, pero las referencias nunca son a elementos anteriores, de modo que la estructura se ramifica y crece igual que un árbol.
+Arboles binarios Son árboles donde cada nodo sólo puede apuntar a dos nodos.
+\begin{itemize}
+ \item \textsl{Arboles binarios de búsqueda (ABB): Son árboles binarios ordenados. Desde cada nodo todos los nodos de una rama serán mayores, según la norma que se haya seguido para ordenar el árbol, y los de la otra rama serán menores.}
+ \item \textsl{Tablas HASH: Son estructuras auxiliares para ordenar listas.\\}
+\end{itemize}
+\textbf{\Large Conclusi\'on}\label{sec:Conclusion}
+%h.5 Fuente de texto %i.5 Tamañodeletra--------------------
+\\Las estructuras de datos permiten almacenar de manera ordenada una serie de valores dados en una misma variable. Las estructuras de datos más comunes son los vectores o arreglos y las matrices, aunque hay otras un poco más diferentes como son el struct y las enumeraciones.
+\\
+\footnote{Veronica Jackeline Quiros Diaz TL23}
+
+\end{document}
+

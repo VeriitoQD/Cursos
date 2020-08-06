@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[top=1cm, bottom=2.5cm, right=3cm,  left=3.5cm]{geometry}
+\usepackage{amsthm}
+\swapnumbers
+\title{\textbf{Y colorín, corolario, este tema se ha acabado}}
+\author{Verónica Jackeline Quiros Díaz  TL34\_VJQD}
+\date{July 2020}
+
+\begin{document}
+\maketitle
+
+\section{Ejemplos de Enunciados}
+\theoremstyle{definition}
+\newtheorem{def1}
+{Definición}[section]
+\begin{def1}
+\label{def1}
+    Sea $u$ un entero positivo. Un código $C$ se dice \textit{detector de u errores} si, siempre que una palabra código incurre en al menos un error  y a los más $u$ errores, la palabra resultante no es una palabra código. Un código C se dice \textit{detector de exactamente u errores} si es detector de $(u+1)$ errores.
+\end{def1}
+
+\theoremstyle{remark}
+\newtheorem{ej1}
+[def1]{Ejemplo}
+\begin{ej1}
+    Sea el código binario $C=\lbrace00000,00111,11222\rbrace$. Analicemos los cambios necesarios en las coordenadas de cada palabra código de manera que podamos obtener alguna otra palabra código existente en C. 
+\end{ej1}
+
+\theoremstyle{plain}
+\newtheorem{th1}
+[def1]{Teorema}
+\begin{th1}
+\label{th1}
+    Un código C es \emph{detector de u errores} si y solo si $d(C)\geq u+1$, es decir, un código con distancia d es un código corrector de exactamente $(d-1)$ errores.
+\end{th1}
+\proof La prueba se sigue por definición.
+\end{document}

@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[top=1.5cm,bottom=2cm,right=2cm,left=2.5cm]{geometry}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{longtable} 
+\usepackage{ragged2e} 
+\usepackage{lscape}
+\title{\textbf{Tablas con \LaTeX}}
+\author{TL42\_VJQD}
+\date{July 2020}
+\begin{document}
+\maketitle
+\justify A continuación, se presentan algunos ejemplos de tablas creadas con \LaTeX. Los entornos {longtable} y {landscape} se distribuyen con MikTeX, por lo que no es necesario descargarlos de ningún repositorio.\\\\
+
+\centering\listoftables
+\newpage
+%%%--------------a--------------
+\begin{table}[H]
+\centering
+\begin{tabular}{p{2.5cm}p{8cm}}
+\hline
+\hline
+\textbf{Término} & \textbf{Descripción}\\
+\hline
+\LaTeX perto & Usuario avanzado de \LaTeXe\ capacitado para la obtención y empleo de paquetes, herramientas y/o aplicaciones desarrolladas para lograr sus propósitos al realizar documentos con \LaTeX.\\
+\hline
+\LaTeX plorador & Usuario principiante de \LaTeXe\ cuya ocupación principal consiste en la recopilación de fuentes de información sobre el uso de \LaTeX.\\
+\hline
+\LaTeX iliado & Usuario de procesadores de texto convencionales que insiste en que no necesita \LaTeX\ para nada, o bien, en que éste no le es de utilidad.\\
+\hline
+\LaTeX cluido & Usuario de procesadores de texto convencionales que desconoce la existencia de \LaTeX.\\
+\hline
+\hline
+\end{tabular}
+\caption{Tabla con especificación de ancho de columna}
+\label{tab:1}
+\end{table}
+%------------------b--------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{p{2.5cm}p{8cm}}
+\hline
+\hline
+\multicolumn{1}{c}{\textbf{Término}} & \multicolumn{1}{c}{\textbf{Descripción}}\\
+\hline
+\LaTeX perto & Usuario avanzado de \LaTeXe\ capacitado para la obtención y empleo de paquetes, herramientas y/o aplicaciones desarrolladas para lograr sus propósitos al realizar documentos con \LaTeX.\\
+\hline
+\LaTeX plorador & Usuario principiante de \LaTeXe\ cuya ocupación principal consiste en la recopilación de fuentes de información sobre el uso de \LaTeX.\\
+\hline
+\LaTeX iliado & Usuario de procesadores de texto convencionales que insiste en que no necesita \LaTeX\ para nada, o bien, en que éste no le es de utilidad.\\
+\hline
+\LaTeX cluido & Usuario de procesadores de texto convencionales que desconoce la existencia de \LaTeX.\\
+\hline
+\hline
+\end{tabular}
+\caption{Tabla con encabezados centrados}
+\label{tab:2}
+\end{table}
+%--------------------c------------------------
+\begin{table}[H]
+\footnotesize
+\centering
+\begin{tabular}{p{2.5cm}p{8cm}}
+\hline
+\hline
+\textbf{Término} & \textbf{Descripción}\\
+\hline
+\LaTeX perto & Usuario avanzado de \LaTeXe\ capacitado para la obtención y empleo de paquetes, herramientas y/o aplicaciones desarrolladas para lograr sus propósitos al realizar documentos con \LaTeX.\\
+\hline
+\LaTeX plorador & Usuario principiante de \LaTeXe\ cuya ocupación principal consiste en la recopilación de fuentes de información sobre el uso de \LaTeX.\\
+\hline
+\LaTeX iliado & Usuario de procesadores de texto convencionales que insiste en que no necesita \LaTeX\ para nada, o bien, en que éste no le es de utilidad.\\
+\hline
+\LaTeX cluido & Usuario de procesadores de texto convencionales que desconoce la existencia de \LaTeX.\\
+\hline
+\hline
+\end{tabular}
+\caption{Tabla con tamaño de fuente igual al de los pies de página}
+\label{tab:3}
+\end{table}
+%%------------------------d------------------------
+\begin{table}[H]
+\centering
+\begin{tabular}{p{2.5cm}p{8cm}}
+\hline
+\hline
+\textbf{Término} & \textbf{Descripción}\\
+\hline
+\LaTeX perto & Usuario avanzado de \LaTeXe\ capacitado para la obtención y empleo de paquetes, herramientas y/o aplicaciones desarrolladas para lograr sus propósitos al realizar documentos con \LaTeX.\\
+\hline
+\LaTeX perto & Usuario avanzado de \LaTeXe\ capacitado para la obtención y empleo de paquetes, herramientas y/o aplicaciones desarrolladas para lograr sus propósitos al realizar documentos con \LaTeX.\\
+\hline
+\LaTeX perto & Usuario avanzado de \LaTeXe\ capacitado para la obtención y empleo de paquetes, herramientas y/o aplicaciones desarrolladas para lograr sus propósitos al realizar documentos con \LaTeX.\\
+\hline
+\LaTeX plorador & Usuario principiante de \LaTeXe\ cuya ocupación principal consiste en la recopilación de fuentes de información sobre el uso de \LaTeX.\\
+\hline
+\LaTeX plorador & Usuario principiante de \LaTeXe\ cuya ocupación principal consiste en la recopilación de fuentes de información sobre el uso de \LaTeX.\\
+\hline
+\LaTeX plorador & Usuario principiante de \LaTeXe\ cuya ocupación principal consiste en la recopilación de fuentes de información sobre el uso de \LaTeX.\\
+\hline
+\LaTeX iliado & Usuario de procesadores de texto convencionales que insiste en que no necesita \LaTeX\ para nada, o bien, en que éste no le es de utilidad.\\
+\hline
+\LaTeX iliado & Usuario de procesadores de texto convencionales que insiste en que no necesita \LaTeX\ para nada, o bien, en que éste no le es de utilidad.\\
+\hline
+\LaTeX iliado & Usuario de procesadores de texto convencionales que insiste en que no necesita \LaTeX\ para nada, o bien, en que éste no le es de utilidad.\\
+\hline
+\LaTeX cluido & Usuario de procesadores de texto convencionales que desconoce la existencia de \LaTeX.\\
+\hline
+\LaTeX cluido & Usuario de procesadores de texto convencionales que desconoce la existencia de \LaTeX.\\
+\hline
+\LaTeX cluido & Usuario de procesadores de texto convencionales que desconoce la existencia de \LaTeX.\\
+\hline
+\hline
+\end{tabular}
+\caption{Tabla que ocupa más de una página}
+\label{tab:4}
+\end{table}
+%%------------------------f---------------------
+\begin{landscape}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{2.5cm}p{8cm}}
+\hline
+\hline
+\textbf{Término} & \textbf{Descripción}\\
+\hline
+\LaTeX perto & Usuario avanzado de \LaTeXe\ capacitado para la obtención y empleo de paquetes, herramientas y/o aplicaciones desarrolladas para lograr sus propósitos al realizar documentos con \LaTeX.\\
+\hline
+\LaTeX plorador & Usuario principiante de \LaTeXe\ cuya ocupación principal consiste en la recopilación de fuentes de información sobre el uso de \LaTeX.\\
+\hline
+\LaTeX iliado & Usuario de procesadores de texto convencionales que insiste en que no necesita \LaTeX\ para nada, o bien, en que éste no le es de utilidad.\\
+\hline
+\LaTeX cluido & Usuario de procesadores de texto convencionales que desconoce la existencia de \LaTeX.\\
+\hline\hline
+\end{tabular}
+\caption{Tabla ``acostada''}
+\label{tab:5}
+\end{table}
+\end{landscape}
+
+\end{document}
