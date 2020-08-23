@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Sistema Solar}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Planetas}{4}{0}{1}
+\beamer@sectionintoc {2}{Galaxia}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Matemáticas}{8}{0}{2}
+\beamer@sectionintoc {3}{Conclusiones}{9}{0}{3}
+\beamer@sectionintoc {4}{Referencias}{10}{0}{4}

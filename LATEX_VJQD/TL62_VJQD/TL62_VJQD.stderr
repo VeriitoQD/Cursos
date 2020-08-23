@@ -1,0 +1,16 @@
+ChkTeX v1.7.6 - Copyright 1995-96 Jens T. Berger Thielemann.
+Compiled with PCRE regex support.
+No errors printed; No warnings printed; 91 user suppressed warnings; No line suppressed warnings.
+Latexmk: This is Latexmk, John Collins, 18 June 2019, version: 4.65.
+Latexmk: Changing directory to '/compile/'
+Rule 'pdflatex': File changes, etc:
+   Changed files, or newly in use since previous run(s):
+      'main.tex'
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -synctex=1 -interaction=batchmode -recorder -output-directory="/compile" --jobname="output"  "main.tex"'
+------------
+Latexmk: Log file says output to 'output.pdf'
+Latexmk: Undoing directory change

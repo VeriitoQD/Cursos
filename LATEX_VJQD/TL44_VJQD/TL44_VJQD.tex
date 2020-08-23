@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[top=3cm,bottom=3cm,right=2cm,left=2cm]{geometry}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{tikz}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{shapes.geometric,arrows}
+\usetikzlibrary{matrix,calc,shapes}
+
+
+\title{\textbf{Y, ¿si necesito crear mis propios gráficos?}}
+\date{Julio 2020}
+\author{Verónica Jackeline Quiros Díaz}
+
+\begin{document}
+\maketitle
+\pagestyle{empty}
+%%Geogebra's figure
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{ttffqq}{rgb}{0.2,1,0}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\definecolor{ffqqff}{rgb}{1,0,1}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+    \begin{axis}[
+            x=1cm,y=1cm,
+            axis lines=middle,
+            ymajorgrids=true,
+            xmajorgrids=true,
+            xmin=-4.04040404040404,
+            xmax=9.13131313131313,
+            ymin=-6.433862433862433,
+            ymax=6.349206349206348,
+            xtick={-4,-3,...,9},
+            ytick={-6,-4,...,6},]
+            \clip(-4.04040404040404,-6.433862433862433) rectangle (9.13131313131313,6.349206349206348);
+            \draw [line width=2pt,color=xdxdff] (1,1) circle (1cm);
+            \draw [line width=2pt,color=qqwuqq] (1,0) circle (1cm);
+            \begin{scriptsize}
+                \draw [fill=ffqqff] (1,1) circle (2.5pt);
+                \draw[color=ffqqff] (1.1043771043771042,1.4497354497354493) node {$A$};
+                \draw [fill=ududff] (2,1) circle (2.5pt);
+                \draw[color=ududff] (2.114478114478114,1.4497354497354493) node {$B$};
+                \draw[color=xdxdff] (0.5521885521885521,1.6825396825396821) node {$c$};
+                \draw [fill=ttffqq] (1,0) circle (2.5pt);
+                \draw[color=ttffqq] (1.1043771043771042,0.45502645502645495) node {$C$};
+                \draw [fill=xdxdff] (0,0) circle (2.5pt);
+                \draw[color=xdxdff] (0.10774410774410773,0.45502645502645495) node {$D$};
+                \draw[color=qqwuqq] (0.5521885521885521,0.6878306878306877) node {$d$};
+        \end{scriptsize}
+    \end{axis}
+\end{tikzpicture}
+%%flowchart
+\pagestyle{empty}
+
+
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{initend} = [rectangle, draw, fill=green!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+    
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [initend] (init) {Area Circulo};
+    \node [cloud, right of=init, node distance=3cm] (system) { radio};
+    \node [block, below of=init] (identify) {$\pi=3.1416$};
+    \node [block, below of=identify] (evaluate) {$A=\pi*r^2$};
+    \node [block, left of=evaluate, node distance=3cm] (update) {Cambiar a radio positivo};
+    \node [decision, below of=evaluate] (decide) {¿El radio es negativo?};
+    \node [block, below of=decide,node distance=3cm] (result) {resultado};
+    \node [initend, below of=result, node distance=3cm] (stop) {Fin};
+    % Draw edges
+    \path [line] (init) -- (identify);
+    \path [line] (identify) -- (evaluate);
+    \path [line] (evaluate) -- (decide);
+    \path [line] (decide) -| node [near start] {yes} (update);
+    \path [line] (update) |- (init);
+    \path [line] (decide) -- node {no}(result);
+    \path [line] (result) -- node {no}(stop);
+    \path [line,dashed] (system) -- (init);
+    \path [line,dashed] (system) |- (evaluate);
+\end{tikzpicture}
+
+
+\end{document}

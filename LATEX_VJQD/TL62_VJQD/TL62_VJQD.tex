@@ -1,0 +1,100 @@
+%% "Plantilla para elaborar presentaciones con LaTeX Beamer”%%
+\documentclass[11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{url} 
+\usepackage{verbatim}
+\usetheme{Warsaw}
+
+\author[TL62\_VJQD]{Verónica Jackeline Quiros Díaz}
+\title[Clase Beamer]{Una plantilla para usar Beamer}
+\date{20 de Agosto de 2020} 
+\subtitle{Presentación básica en \LaTeX}
+
+
+\begin{document}
+\maketitle
+
+    \begin{frame}{Índice}
+		\tableofcontents
+	\end{frame}
+    \section{Programación}
+		\begin{frame}{Programación}
+		Es una serie de instrucciones que se sigan para realizar una operación, escritas mediante un lenguaje de programación.
+		\end{frame}
+    \subsection{Pseudocódigo}
+            \begin{frame}{Pseudocódigo}
+            \centering
+			Es la manera de expresar el procedimiento o bien, la solución de un problema, pero escrito en lenguaje natural$($ utilizamos para comunicarnos$).$
+			\end{frame}
+	\subsection{Algoritmo}
+            \begin{frame}{Algoritmo}
+			\justifying
+			Es la manera real de plasmar el procedimiento o bien, la solución de un problema. Se respalda de técnicas y fundamentos.
+			\end{frame}
+    \section{Lenguajes}
+		\begin{frame}{Lenguajes}
+			\justifying
+			Es la manera de entablar comunicación con la máquina, ya que funje como traductor o intermediario: transforma el lenguaje natural al de máquina, para que siga las instrucciones y resuelva un problema.
+		\end{frame}
+	\subsection{Código}	
+	    \begin{frame}{Código}
+			\justifying
+			Es el conjunto de lineas de texto, que indica los pasos que se deben seguir para elaborar un programa.
+		\end{frame}
+	\subsection{Variedad}	
+	    \begin{frame}{Variedad}
+			\justifying
+			Existe una gran lista de lenguajes de progración. Cada uno de ellos se dedica a programar ciertas partes del software. Se encuentran tanto para frontend como para la parte del backend, entre otros.
+			Ejemplos:
+			\begin{itemize}
+			    \item C,C++
+			    \item Java
+			    \item Javascript
+			    \item Python
+			    \item PHP,HTML,CSS
+			    \item etc.
+			\end{itemize}
+		\end{frame}
+	
+    \section{Estructuras de Datos}
+		\begin{frame}{Estructuras de Datos}
+			\centering
+			\begin{columns}
+                \column{2in}
+                Como su nombre lo indica, son estruturas o bien, metodos(operaciones) que permiten reducir carga de trabajo, tanto en complejidad temporal como espacial.
+    			Son perfectas para organizar, almacenar y distribuir grandes cantidades de información.
+                \column{2in}
+               Entre ellas, se encuentran: Colas,Pilas,Listas,Arboles,etc.
+            \end{columns}
+		\end{frame}
+	\subsection{Cola,Pilas}	
+	    \begin{frame}{Cola,Pilas}
+			\justifying
+			Estas estructuras permiten almacenar la informacion introducida y darle cierta organizacion, de acuerdo a una prioridad que se le programe. Las pilas son del tipo \textcolor{red}{LIFO}, mientras que las colas son del tipo \textcolor{red}{FIFO}.
+		\end{frame}
+    \subsection{Arboles}	
+	    \begin{frame}{Arboles}
+			\justifying
+			Ellos se encargan de encontrar datos, cuya distribucion resulte mas compleja; del tipo red neural, grafos, etc.Y da una organización más fácil de visualizar.
+			Es muy comun el uso de axiomas, proposiciones, teoremas, corolarios y demostraciones,en este tipo de casos, tal como:
+            \begin{block}{Teorema de Pitágoras}
+                Sean $a$ y $b$ los catetos de un triángulo rectángulo; y c, la hipotenusa. Entonces, se satisface que
+                $c^2=a^2+b^2$
+            \end{block}
+    	\end{frame}
+    \section{Fin}
+		\begin{frame}[containsverbatim]{Fin}
+              Este es el final de la presentación. Esta parte debería ir con verbatim.
+        \end{frame}
+\end{document}

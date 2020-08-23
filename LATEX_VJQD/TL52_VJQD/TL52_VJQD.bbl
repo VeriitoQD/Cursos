@@ -1,0 +1,40 @@
+\begin{thebibliography}{1}
+
+\bibitem{Lint}
+J.~H van Lint.
+\newblock {\em Introduction to Coding Theory}.
+\newblock Springer, 3 edition, 1999.
+
+\bibitem{calderbank}
+{ A. R Calderbank, A. R. Hammons Jr,A. R. and Kumar, P.V. and Sloane,N.J.A.and
+  Sole, P.}
+\newblock A linear construction for certain kerdock and preparata codes.
+\newblock {\em American Mathematical Society}, 29(2):218--222, 1993.
+
+\bibitem{conway}
+J.~H. Conway and N.~J.~A. Sloane.
+\newblock Self-dual codes over the integers modulo 4.j.combin.
+\newblock {\em Theory Ser.A.}, 62(1):30--45, 1993.
+
+\bibitem{honold}
+T.~Honold.
+\newblock Characterization of finite frobenius rings.
+\newblock {\em Archiv der Mathematik}, 76:406--415, 2001.
+
+\bibitem{ling}
+S.Ling and Ch. Xing.
+\newblock {\em Coding Theory, A First Course}.
+\newblock Cambridge University Press, 3 edition, 2004.
+
+\bibitem{cyclic}
+{V. S. Pless and Z.Qian}.
+\newblock Cyclic codes and quadratic residue codes over z4.
+\newblock {\em Information Theory, IEEE Transactions on}, 42(5):1594--1600,
+  1996.
+
+\bibitem{pless}
+{V. S. Pless, P. Sole, and Z. Qian}.
+\newblock Cyclic self-dual z4-codes.
+\newblock {\em Finite Fields and Their Applications}, 3(1):48--69, 1997.
+
+\end{thebibliography}

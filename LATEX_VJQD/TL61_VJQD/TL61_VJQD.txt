@@ -1,0 +1,66 @@
+a. ¿Cuál es la estructura básica de una presentación con Beamer?
+%Preámbulo del documento
+\documentclass[spanish]{beamer}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}%%Para los acentos
+\title{Presentaciones con la clase \LaTeX Beamer}
+\author{Mayra Lorena D´iaz Sosa}
+\institute{FES Acatl´an, UNAM}
+\date{}
+\begin{document}
+\frame{\titlepage} % Portada con datos del preámbulo
+\frame{\tableofcontents} %´Indice de la presentación
+\section{Primer tema}%Bloque para crear diapositiva
+\begin{frame}
+Comentarios sobre el primer tema.
+\end{frame}%Fin de bloque
+\section{Segundo tema}%Bloque para crear diapositiva
+\begin{frame}
+Comentarios sobre el segundo tema.
+\end{frame}%Fin de bloque
+\end{document}
+
+b. ¿Con qué comandos se determina el tema (la apariencia general) y el color de la presentación? ¿Cuáles son sus respectivas opciones? ¿Dónde deben escribirse estos comandos?
+Se indica por medio de la instrucción \usetheme{opción} en el preámbulo del documento. 
+Las opciones disponibles son:
+Antinbes,Berkeley,Boadilla,CambridgeUS,Darmstadt,Dresden,Goettingen,Ilmenau,Luebeck,Malmoe,
+Montpellier,Pittsburgh,Singapore,Warsaw,AnnArbor,Bergen,Berlin,boxes,Copenhagen,default,Frankfurt,
+Hannover,JuanLesPins,Madrid,Marburg,PaloAlto,Rochester,Szeged
+
+c. ¿Cuáles comandos se utilizan para crear bloques para resaltar enunciados matemáticos?
+Para resaltar, se utiliza  lo siguiente:
+\begin{block}{Teorema de Pitagoras}
+Sean $a$ y $b$...\end{block}
+
+d. ¿Cómo se puede dividir una diapositiva en dos?
+Con los siguientes comandos:
+\begin{columns}[cc]
+\column{2in}
+...
+\end{columns}
+
+e. ¿Cómo se insertan tablas con colores en las diapositivas?
+%En el preámbulo del documento:
+\documentclass[xcolor=pdftex,dvinames,table]{beamer}
+%En el cuerpo del documento:
+\rowcolors{1}{blue!20}{blue!15}
+\begin{tabular}{ll}\hline
+\textbf{Término}&\textbf{Descripción}\hline \\
+\LaTeX perto& Usuario avanzado de \LaTeX\\
+...
+\end{tabular}
+
+f.  ¿Cómo puede incluirse el entorno verbatim?
+Es necesario definir la diapositiva de este modo:
+\begin{frame}[containsverbatim]
+Texto de la diapositiva y comandos
+en el entorno verbatim...
+\end{frame}
+
+g. ¿Cómo pueden insertarse las referencias?
+Se pueden insertar como en cualquier documento de
+LATEX.
+\begin{thebibliography}{1}
+\bibitem{clave}
+texto de la referencia...
+\end{thebibliography}
